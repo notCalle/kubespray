@@ -155,6 +155,15 @@
     - { role: kubespray-defaults }
     - { role: kubernetes-apps, tags: apps }
 
+- name: Upgrade ingress controller on controller nodes
+  hosts: kube_master
+  gather_facts: False
+  any_errors_fatal: "{{ any_errors_fatal | default(true) }}"
+  environment: "{{ proxy_disable_env }}"
+  roles:
+    - { role: kubespray-defaults }
+    - { role: kubernetes-apps/ingress_controller, tags: ingress-controller }
+
 - hosts: k8s_cluster
   gather_facts: False
   any_errors_fatal: "{{ any_errors_fatal | default(true) }}"
