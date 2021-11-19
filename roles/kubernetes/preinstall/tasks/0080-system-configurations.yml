@@ -32,7 +32,7 @@
     backup: yes
   when:
     - disable_ipv6_dns
-    - not ansible_os_family in ["Flatcar Container Linux by Kinvolk"]
+    - not ansible_os_family in ["Flatcar", "Flatcar Container Linux by Kinvolk"]
   tags:
     - bootstrap-os
 
