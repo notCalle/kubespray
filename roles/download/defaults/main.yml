@@ -69,7 +69,7 @@ nerdctl_extra_flags: '{%- if containerd_insecure_registries is defined and conta
 
 # Versions
 kubeadm_version: "{{ kube_version }}"
-etcd_version: v3.5.0
+etcd_version: v3.5.3
 crun_version: 1.3
 runc_version: v1.0.3
 kata_containers_version: 2.2.3
@@ -556,8 +556,8 @@ etcd_binary_checksums:
   # Etcd does not have arm32 builds at the moment, having some dummy value is
   # required to avoid "no attribute" error
   arm: 0
-  arm64: 444e10e6880595d75aaf55762901c722049b29d56fef50b2f23464bb7f9db74d
-  amd64: 864baa0437f8368e0713d44b83afe21dce1fb4ee7dae4ca0f9dd5f0df22d01c4
+  arm64: 8b00f2f51568303799368ee4a3c9b9ff8a3dd9f8b7772c4f6589e46bc62f7115
+  amd64: e13e119ff9b28234561738cd261c2a031eb1c8688079dcf96d8035b3ad19ca58
 
 flannel_cni_binary_checksums:
   arm:
